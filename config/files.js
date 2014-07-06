@@ -10,6 +10,7 @@ module.exports = function(lineman) {
   return {
     js: {
       vendor: [
+        "vendor/js/jquery.js",
         "vendor/js/angular.js",
         "vendor/js/**/*.js"
       ],
@@ -22,9 +23,13 @@ module.exports = function(lineman) {
     less: {
       compile: {
         options: {
-          paths: ["vendor/css/normalize.css", "vendor/css/**/*.css", "app/css/**/*.less"]
+          paths: ["vendor/css/bootstrap.css", "vendor/css/**/*.css", "app/css/**/*.less"]
         }
       }
+    },
+
+    webfonts: {
+      root: 'fonts'
     }
   };
 };
