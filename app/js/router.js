@@ -1,14 +1,14 @@
-angular.module("app").config(function($routeProvider, $locationProvider) {
+angular.module("app").config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $locationProvider.html5Mode(false);
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.when('/home', {
+  $stateProvider.state('home', {
+    url: '/home',
     templateUrl: 'home.html',
     controller: 'HomeController'
-  });
-
-  $routeProvider.when('/list-of-books', {
+  }).state('list-of-books', {
+    url: '/list-of-books',
     templateUrl: 'books.html',
     controller: 'BooksController'
     // uncomment if you want to see an example of a route that resolves a request prior to rendering
@@ -19,6 +19,6 @@ angular.module("app").config(function($routeProvider, $locationProvider) {
     // }
   });
 
-  $routeProvider.otherwise({ redirectTo: '/home' });
+  $urlRouterProvider.otherwise('/home');
 
 });
