@@ -10,9 +10,9 @@
   "devDependencies": {
     "coffee-script": "~1.6.3",
     "jasmine-given": "~2.1.0",
-    "lineman": ">= 0.28.0",
-    "lineman-angular": ">= 0.2.0",
-    "lineman-less": "0.0.1",
+    "lineman": "^0.33.4",
+    "lineman-angular": "^0.2.0",
+    "lineman-less": "^0.1.0",
     "protractor": "^0.23.1"
   },
   "scripts": {
