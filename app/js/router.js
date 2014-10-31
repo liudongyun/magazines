@@ -10,15 +10,13 @@ angular.module("app").config(function($stateProvider, $urlRouterProvider, $locat
   }).state('list-of-books', {
     url: '/list-of-books',
     templateUrl: 'books.html',
-    controller: 'BooksController'
-    // uncomment if you want to see an example of a route that resolves a request prior to rendering
-    // resolve: {
-    //   books : function(BookService) {
-    //     return BookService.get();
-    //   }
-    // }
+    controller: 'BooksController'   
+  }).state('hermes', {
+    url: '/hermes',
+    templateUrl: 'hermes.html',
+    controller: 'HermesController'   
   });
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/hermes');
 
 });
